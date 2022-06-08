@@ -1,13 +1,5 @@
-import { variavelQualquer, nameTest } from './functions.js';
-
 // end point API
-let baseURL = 'http://localhost:3000/';
-
-let testA = document.querySelector('#testeA');
-testA.addEventListener('click', () => {
-  variavelQualquer();
-  console.log(nameTest);
-});
+let baseURL = 'https://e-carros-api.herokuapp.com/';
 
 // Ref elements
 let findForm = document.querySelector('#findapi');
@@ -17,7 +9,7 @@ let allBrands = [];
 
 function getApiData() {
   brandSection.innerHTML = `
-    <p>Agurade carregando</p>
+    <p>Carregando...</p>
   `;
   axios.get(baseURL + 'brands').then((res) => {
     allBrands = res.data;
@@ -26,7 +18,7 @@ function getApiData() {
           ${allBrands
             .map(
               (item) => `
-              <option value="${item.id}">${item.name}</option>
+              <option value="${item.id}">${item.id}</option>
             `
             )
             .join(', ')}
@@ -47,8 +39,11 @@ function getParaters() {
         ${allParameters
           .map(
             (item) => `
-          <input type="radio" value="${item.title}" >
-          <label>${item.title}</label>
+          <div class="parameter-items flex-center">
+            <label class="flex-center">${item.title}
+              <input type="radio" value="${item.title}" name="parameters">
+            </label>
+          </div>
           <br/>
           `
           )

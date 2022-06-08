@@ -23,27 +23,30 @@
     </header>
 
     <div class="d_flex center_content section_contact">
-      <div>
-        <h1>Título 01</h1>
-        <p>
-          Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as pessoas mais interessantis.Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as
-          pessoas mais interessantis.Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as pessoas mais interessantis.
-        </p>
+      <div class="title-container">
+        <h1>ENTRE EM CONTATO CONOSCO</h1>
+        <h3>Deixe seu feedback!</h3>
+        <h3>Entraremos em contato o mais rápido possível.</h3>
       </div>
     </div>
     <form id="contact_form">
-      <h3>Entre em contato</h3>
-      <fieldset>
+      <div class="field-group">
         <label for="name">Nome:</label>
-        <input type="text" id="name" name="user_name" />
+        <input type="text" id="name" name="user_name" class="input" />
+      </div>
+      <div class="field-group">
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="user_email" />
+        <input type="email" id="email" name="user_email" class="input" />
+      </div>
+      <div class="field-group">
         <label for="telephone">Telefone:</label>
-        <input type="telephone" id="phone" name="user_telephone" />
-        <label for="bio">Escreva sua mensagem:</label>
-        <textarea id="bio" name="message"></textarea>
-      </fieldset>
-      <button type="submit">Enviar mensagem :)</button>
+        <input type="telephone" id="phone" name="user_telephone" class="input" />
+      </div>
+      <div class="field-group ">
+        <label for="bio" class="text-area-label">Escreva sua mensagem:</label>
+        <textarea id="bio" name="message" class="input"></textarea>
+      </div>
+      <input class="input-submit" type="submit" value="Enviar"></input>
     </form>
     <div id="loader" class="loader_inative">
       <div class="loader_content">

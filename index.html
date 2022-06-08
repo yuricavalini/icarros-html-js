@@ -24,25 +24,32 @@
 
     <div class="container">
       <div class="article_content p50">
-        <p class="p50">
-          Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as pessoas mais interessantis.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num
-          gostis.Não sou faixa preta cumpadi, sou preto inteiris, inteiris.Diuretics paradis num copo é motivis de denguis.
+        <p>
+          Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa as pessoas mais interessantis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num
+          gostis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. Diuretics paradis num copo é motivis de denguis.
         </p>
-        <img src="img/mussum.webp" alt="mussum" class="img_article" />
       </div>
     </div>
 
-    <div class="section red_bg d_flex center_content">
+    <div class="main-section d_flex center_content">
       <div>
         <div>
           <form id="findapi">
-            <input type="text" id="getModel" placeholder="Informe o modelo desejado" />
+            <div class="group">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                <g>
+                  <path
+                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                  ></path>
+                </g>
+              </svg>
+              <input placeholder="Buscar" type="text" class="input input-search" />
+            </div>
+
             <div id="brands"></div>
-            <div id="parameters" class="d-flex color-black"></div>
-            <input type="submit" value="pesquisar" />
+            <fieldset id="parameters" class="d-flex color-black"></fieldset>
+            <input class="input-submit" type="submit" id="getModel" value="Pesquisar" />
           </form>
-          <button onclick="qualquerCoisa()">Clique aqui</button>
-          <button id="testeA">Teste</button>
         </div>
       </div>
     </div>
