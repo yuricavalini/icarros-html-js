@@ -18,7 +18,7 @@ function getApiData() {
           ${allBrands
             .map(
               (item) => `
-              <option value="${item.id}">${item.id}</option>
+              <option value="${item.id}">${item.name}</option>
             `
             )
             .join(', ')}
@@ -33,15 +33,15 @@ let allParameters = [];
 
 let parameters = document.querySelector('#parameters');
 function getParaters() {
-  axios.get(baseURL + 'parameters').then((res) => {
+  axios.get(baseURL + 'additional').then((res) => {
     allParameters = res.data;
     parameters.innerHTML = `
         ${allParameters
           .map(
             (item) => `
           <div class="parameter-items flex-center">
-            <label class="flex-center">${item.title}
-              <input type="radio" value="${item.title}" name="parameters">
+            <label class="flex-center">${item}
+              <input type="checkbox" value="${item}" name="additional">
             </label>
           </div>
           <br/>
@@ -59,5 +59,12 @@ findForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
   let getDataBrands = document.querySelector('#getDataBrands').value;
-  axios.get(`${baseURL}adverts${getDataBrands === '' ? '' : `?brand=${getDataBrands.replace(' ', '%20%').toLowerCase()}`}`).then((res) => console.log(res.data));
+  axios.get(`${baseURL}adverts${getDataBrands === '' ? '' : `?brand=${getDataBrands.replace(' ', '%20%').toLowerCase()}`}`).then((res) => {
+    if (res.data?.length) {
+      const result = res.data.map((item) => item.model).join(', ');
+      alert(result);
+    } else {
+      alert('Nenhum resultado encontrado.');
+    }
+  });
 });
