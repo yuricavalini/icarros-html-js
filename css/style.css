@@ -12,11 +12,13 @@ header {
 
 html {
   background-color: rgb(240, 240, 240);
+  height: 100%;
 }
 
 body {
   background-color: #06283d;
   color: #47b5ff;
+  height: 100%;
 }
 
 h1,
@@ -323,13 +325,19 @@ footer {
   border-radius: 4px;
   font-weight: 600;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in, box-shadow 0.3s ease-in;
 }
 
 .input-submit:hover {
   background-color: #47b5ff;
   color: white;
-  box-shadow: 0px 10px 10px 0px #47b5ffcc;
+  /* box-shadow: 0px 10px 10px 0px #47b5ffcc; */
+}
+
+.input-submit:active {
+  background-color: #3993cf;
+  transition: background-color 0.1s ease-in;
+  /* box-shadow: 0px 5px 10px 0px #47b5ffcc; */
 }
 
 .field-group {
