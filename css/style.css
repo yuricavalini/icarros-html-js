@@ -1,24 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
-  background-color: #06283d;
+html,
+body {
+  height: 100%;
 }
 
 html {
   background-color: rgb(240, 240, 240);
-  height: 100%;
 }
 
 body {
   background-color: #06283d;
   color: #47b5ff;
-  height: 100%;
+}
+
+header {
+  background-color: #06283d;
 }
 
 h1,
@@ -231,6 +236,13 @@ footer {
   align-items: center;
   justify-content: center;
   height: 150px;
+}
+
+.main-contact {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  background-color: #06283d;
 }
 
 /* INPUT */
